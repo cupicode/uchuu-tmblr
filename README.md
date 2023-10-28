@@ -1,5 +1,7 @@
 # uchuu-tmblr
 an archive of my tumblr's html and all the changes i make on it.
+### current theme ; puretone
+> i may add more alternative themes, maybe... lol
 
 ## recent changes
 - created this github
