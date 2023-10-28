@@ -1,0 +1,773 @@
+<<!DOCTYPE html>
+<html>
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+    
+</head>
+
+
+<!--            IMPORTS ; LINKS ; SCRIPTS            --> 
+
+<!--- links --->
+<meta name="text:link 1" content="link 1"/>
+<meta name="text:link 1 title" content="description"/>
+<meta name="text:link 1 url" content="/"/>
+<meta name="text:link 2" content="link 2"/>
+<meta name="text:link 2 title" content="description"/>
+<meta name="text:link 2 url" content="/"/>
+<meta name="text:link 3" content="link 3"/>
+<meta name="text:link 3 title" content="description"/>
+<meta name="text:link 3 url" content="/"/>
+<meta name="text:link 4" content="link 4"/>
+<meta name="text:link 4 title" content="description"/>
+<meta name="text:link 4 url" content="/"/>
+
+<!-- custom font links -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.cdnfonts.com/css/mondeline" rel="stylesheet">
+
+<!--- ICON FONTS ---->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<!--            START ; SCRIPTS            --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<!-- FADE IN AT START -->
+
+
+<script>
+$(document).ready(function() {
+   /** fade in **/
+   $("#all").animate({"opacity":"1"}, 1000);
+   /** fade in **/
+});
+</script>
+
+<!-- TOOL TIP -->
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<script> 
+(function($){ $(document).ready(function(){ $("a[title]").style_my_tooltips({ tip_follows_cursor:true, tip_delay_time:50, tip_fade_speed:600, attribute:"title" }); }); })(jQuery); 
+</script>
+ 
+
+
+
+<!--            START ;; STYLE            --> 
+
+
+
+<style type="text/css">
+@keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}    
+
+/* basic - body, posts */
+
+body {
+   background-color:#faf6f2;
+   font-family: 'roboto';
+   font-weight: 400;
+   text-align: justify;
+   font-size: 12px;
+   color:#aaa;
+   text-transform:lowercase;
+   margin: 0px;
+}
+
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    color:#c6dce7;
+    letter-spacing:1.5px;
+    line-height: 90%;
+    text-align: center;
+    background-color: #fff;
+    text-shadow: 0px 0px 3px #d2f1ef;
+}
+
+h2, h3, big { 
+    font-size:200%;
+    text-transform:uppercase;
+    font-family:'poppins', sans-serif;
+    
+}
+
+h4, h5, h6 {
+    font-size:150%;
+    text-transform:uppercase;
+    font-family:'poppins', sans-serif;
+}
+
+a {
+    font-family:'poppins', sans-serif;
+    text-transform:uppercase;
+    color:#c6dce7;
+    font-weight:700;
+    text-decoration:none; 
+    letter-spacing:1px; 
+    word-wrap:break-word;
+}
+
+b, strong {
+    font-family:'poppins', sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+}
+big {
+    font-family:'poppins', sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:150;
+}
+
+hr {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #dae3ec;
+    padding:5px;
+}
+
+p { 
+    margin:5px; 
+    line-height: 175%;
+    text-align: justify;
+}
+
+i, em, p.npf_quirky {
+    font-family: 'Mondeline', sans-serif;
+    color:#fabc8c;
+    font-size: 20px;
+    text-transform:lowercase;
+}
+
+p.npf_quote {
+    font-family: 'Abril Fatface', cursive;
+}
+
+small, sub, sup { 
+    font-size:80%; 
+}
+
+img { 
+    max-width:100%; 
+    height:auto; 
+    margin:auto; 
+    border:none; 
+}
+blockquote { 
+    margin:5px; 
+    padding-left:20px; 
+    border-left:1px solid #dae3ec; 
+    
+}
+
+
+            /*            ID            */
+#all {
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s; 
+    animation: fadein 1.5s;
+}
+
+#content {
+    position:absolute;
+    left:550px;
+}
+
+/* sidebar */
+
+#sidebar {
+    display:block;
+    box-shadow: 0px 0px 15px #fff;
+    position:fixed;
+    text-align:justify;
+    background-color:#fff;
+    width: 200px;
+    height: auto;
+    left:120px;
+    margin:100px;
+    padding:20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#sidebar hr{
+    border-top: 0px;
+    border-right: 0px;
+    border-left:0px;
+    border-bottom:1px solid #dae3ec;
+    width: 75%;
+    position: relative;
+    padding-top:5px;
+    
+}
+
+#tagsblock {
+    position: relative;
+    text-align:right;
+    right: 10px;
+}
+
+#tagsblock a {
+    width: auto;
+    height: 10px;
+    font-family: "roboto", sans-serif;
+    font-size: 7.5px;
+    font-weight: 800;
+    text-shadow: 0px 0px 2px #fff;
+    letter-spacing: 1.5px;
+    color: #d2dbe7;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#tagsblock a:hover {
+    color:#fff;
+    text-shadow: 0px 0px 6px #1b90d3;
+    transition: all .3s;
+}
+
+#pfp {
+    float: right;
+}    
+ 
+#pfp img {
+    box-shadow: 0px 0px 3px ;
+    margin:10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+    width: 90px;
+}
+
+#s-m-t-tooltip { 
+    max-width:200px; 
+    max-height:auto; 
+    background:#fff; 
+    margin:20px; 
+    padding:10px; 
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    font-family: "roboto", sans-serif;
+    font-size: 7.5px;
+    font-weight: 800;
+    text-shadow: 0px 0px 2px #fff;
+    letter-spacing: 1.5px;
+    color: #d2dbe7;
+    text-transform: uppercase;
+    font-style: italic;
+    box-shadow: 0px 0px 10px #d2dbe7;
+}
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar-thumb { 
+    background-color:#f69688;
+    border: 3px solid #fff;
+    
+}
+
+::-webkit-scrollbar { 
+    width:7px; 
+    height:3px; 
+    background:transparent; 
+    
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 3px solid #fff;
+}
+
+
+/* SELECTION */
+
+::selection { 
+    background-color: rgba(245,150,136,0.3);
+    color:#fff;
+    text-shadow: #fff 1px 0 3px;
+    
+}
+
+            /*            CLASSES            */
+
+.title {
+    position: absolute;
+    width: auto;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    color:#c6dce7;
+    left: 25px;
+    letter-spacing:1.5px;
+    line-height: 10px;
+    text-shadow: 0px 0px 3px #d2f1ef;
+}
+
+.description {
+    position: relative;
+    width: auto;
+    top: 75px;
+    height: 10px;
+    margin-bottom: 10px;
+    line-height: 10px;
+    text-align: right;
+    font-style: italic;
+    font-size:10px;
+}
+
+.subprns{
+    position: absolute;
+    top: 80px;
+    height: 10px;
+    left: 40px;
+    font-family: "roboto", sans-serif;
+    font-size: 7.5px;
+    font-weight: 800;
+    text-shadow: 0px 0px 2px #fff;
+    letter-spacing: 1.5px;
+    color: #d2dbe7;
+    text-transform: uppercase;
+    font-style: italic;
+    background:#fff;
+}
+.posts {
+   position: relative;
+   width:550px;
+   background-color:#fff;
+   text-align: justify;
+   padding:30px;
+   margin:20px;
+   display:block;
+   box-shadow: 0px 0px 20px #fff;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   overflow: hidden;
+}
+
+.topinfo {
+    font-family:'poppins', sans-serif;
+    font-weight:500;
+    color:#c6c3c8;
+    text-transform:uppercase;
+    font-size:12px;
+    
+}
+
+.topinfo a {
+    font-weight:500;
+    color:#c6c3c8;
+}
+
+.topinfo a:hover {
+    color: #fabc8c;
+    font-size: 105%;
+    transition: all .4s;
+}
+
+.subtitle {
+    position: absolute;
+    width: auto;
+    height: 10px;
+    font-family: "roboto", sans-serif;
+    font-size: 7.5px;
+    font-weight: 800;
+    text-shadow: 0px 0px 2px #fff;
+    letter-spacing: 1.5px;
+    color: #d2dbe7;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.read_more {
+    position: relative;
+    color: #fabc8c;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.read_more a {
+    text-align:center;
+}
+
+/* page navigation (arrows) */
+.pagination { 
+    text-align:center; 
+}
+
+.pagination a { 
+    color: #aaa;
+    padding:8px; 
+    word-spacing:2px; 
+    
+}
+
+.pagination a:hover { 
+    color:#c6dce7;
+    transition: all .3s;
+    
+}
+
+.links {
+    position:relative;
+    display:inline-block; 
+    width:160px; 
+    height:30px; 
+    left: 20px;
+    overflow:hidden; 
+    text-align:center;
+}
+
+.links a { 
+    display:inline-block; 
+    width:auto;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 10px;
+    color: #aaa;
+    text-transform: lowercase;
+}
+
+.links a:hover { 
+    background-color:#c6dce7;
+    color: #fff;
+    transition: all .3s;
+}
+
+/* PAGEDOLLS AND DECORATION */
+
+.pagedoll {
+    position: fixed;
+    bottom: 0px;
+    left: 850px;
+    width:1000px;
+}
+
+.rotate {
+  animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* TUMBLR CONTROLS by cyantists */
+
+iframe.tmblr-iframe { top:0px!important; right:0px!important; opacity:0.5; transform:scale(0.6); transform-origin:100% 0; -webkit-transform:scale(0.65); -webkit-transform-origin:100% 0; -o-transform:scale(0.65); -o-transform-origin:100% 0; -moz-transform:scale(0.65); -moz-transform-origin:100% 0; -ms-transform:scale(0.65); -ms-transform-origin:100% 0; z-index:100000!important; padding-top:12.5px; padding-right:70px; transition: all .3s; }
+
+iframe.tmblr-iframe:hover { opacity:1!important; }
+
+.tumblr-controls { position:fixed; width:30px; height:30px; top:10px; right:10px; background:{color:posts}; z-index:9999; border:1px solid {color:borders}; text-align:center; }
+
+.tumblr-controls .iconify { position:absolute; font-size:16px; color:{color:text}; margin:auto; left:0px; right:0px; top:0px; bottom:0px; 
+
+</style>
+
+
+ 
+<!--            START ;; BODY            --> 
+
+
+
+<body>
+<div style="top:200px; position: fixed; width:200%;">
+    <hr style="border-bottom:7px solid #c6dce7;margin:0px;padding:5px">
+    <hr style="border-bottom:7px solid #d2f1ef;margin:0px;padding:5px">
+    <hr style="border-bottom:7px solid #fabc8c;margin:0px;padding:5px">
+    <hr style="border-bottom:7px solid #ffd593;margin:0px;padding:5px">
+</div>
+<div id="all">
+
+<div class="pagedoll">
+<img src="https://cdn.discordapp.com/attachments/992769242627854456/1125246846701424731/puretone_leo_pagedoll.png" class="pagedoll";>
+</div>
+
+<div style="position:fixed">
+<iconify-icon class= "rotate" icon="ph:flower-fill" style="color:#FABC8C;font-size:150px;left:165px;top:50px;position:absolute"></iconify-icon>
+</div>
+
+<!-- sidebar content -->
+
+<div id="sidebar">
+
+    <div id="tophalf">
+        <div class="subtitle"> ;; bundle of pure tone </div>
+        <div id="pfp"><img src="https://64.media.tumblr.com/384a0f49ce0598448cb38e2d76ad3554/8318b84341db2ee3-6f/s96x96u_c1/cb8b28193cfc66e8fb6f36541769be7190dfbc71.pnj"></div>
+        
+        <h1 class="title">{Title}</h1>
+        <div class="subprns"> 19 | he/they </div>
+        
+        <div class="description">
+        {block:Description}{Description}{/block:Description}
+        </div>
+    </div>
+<hr>
+<div class=links>
+{block:iflink1}<a href="{text:link 1 url}" title="{text:link 1 title}">{text:link 1}</a>{/block:iflink1}
+{block:iflink2}<a href="{text:link 2 url}" title="{text:link 2 title}">{text:link 2}</a>{/block:iflink2}
+{block:iflink3}<a href="{text:link 3 url}" title="{text:link 3 title}">{text:link 3}</a>{/block:iflink3}
+{block:iflink4}<a href="{text:link 4 url}" title="{text:link 4 title}">{text:link 4}</a>{/block:iflink3}
+</div>
+
+{block:Pagination} <div class="pagination"> 
+{block:previouspage} 
+
+<a href="{previouspage}"title="previous page"><iconify-icon icon="mingcute:arrows-left-fill" style="font-size:15px"></iconify-icon></a> 
+
+{/block:previouspage} 
+
+<iconify-icon class= "rotate" icon="ph:flower-fill" style="color:#FABC8C;font-size:15px;>"></iconify-icon>
+
+{block:nextpage} 
+<a href="{nextpage}"title="next page"><iconify-icon icon="mingcute:arrows-right-fill" style="font-size:15px;" ></iconify-icon></a> 
+{/block:nextpage} </div> 
+
+{/block:pagination}
+
+    
+</div>    
+ 
+<!-- main content -->
+<div id="content">
+
+{block:Posts}
+<div class="posts">
+
+<!-- TOP INFO --->
+{block:Date}
+<div class="topinfo"> 
+    <p style="text-align:left;"> 
+    <a href="{Permalink}" title="posted {TimeAgo} with {NoteCountWithLabel}"> <iconify-icon icon="eos-icons:master"style="font-size:12px; vertical-align:-1px; padding-left:7px;"></iconify-icon> 
+    {Month} {Year}</a> 
+        <span style="float:right;"> 
+            <a href="{ReblogURL}" target="_blank" title="reblog this post"> 
+            <iconify-icon icon="eos-icons:arrow-rotate" style="font-size:12px; vertical-align:-2px; padding-left:7px;"></iconify-icon> 
+            reblog</a> {block:ContentSource}
+            <a href="{SourceURL}" title="posted by {SourceTitle}."> 
+            <iconify-icon icon="eos-icons:compass" style="font-size:12px; vertical-align:-2px; padding-left:7px;"></iconify-icon>
+            source</a>{/block:ContentSource}
+        </span>
+    </p>
+</div>
+<br>
+{/block:Date}
+<div style="padding-left:25px; padding-right:25px">
+
+{block:Text}{block:Title}<h1>{Title}</h1>{/block:Title}{Body}{/block:Text}
+
+{block:Photo}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+ 
+{block:Panorama}{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}
+ 
+{block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+ 
+{block:Quote}"{Quote}"{block:Source}{Source}{/block:Source}{/block:Quote}
+ 
+{block:Link}<a href="{URL}" class="link" {Target}>{Name}</a>{block:Description}{Description}{/block:Description}{/block:Link}
+ 
+{block:Chat}{block:Title}{Title}</a>{/block:Title}
+{block:Lines}<li>{block:Label}{Label}{/block:Label}{Line}</li>{/block:Lines}{/block:Chat}
+ 
+{block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+ 
+{block:Audio}{AudioEmbed}{block:Caption}{Caption}{/block:Caption}{/block:Audio}
+
+
+</div>
+
+
+
+{block:HasTags}
+<hr>
+<div id="tagsblock">
+{block:Tags}<a href="{TagURL}"><iconify-icon icon="solar:tag-bold"></iconify-icon> {Tag}</a>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+
+</div>
+
+
+<br>
+{/block:Posts}
+
+</div>
+<!--
+        MUSIC PLAYER #03 by glenthemes
+        ♬ glenthpvs.tumblr.com/player03
+--->
+<script src="//cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Public+Sans|Karla" rel="stylesheet">
+<link href="//glenthemes.github.io/-music-/glenplayer03.css" rel="stylesheet">
+<script src="//glenthemes.github.io/-music-/glenplayer03.js"></script>
+<style element="glenplayer03">
+
+:root {
+    --MusicBox-Left-Or-Right:left;
+    --MusicBox-Edge-Distance:220px;
+    
+    --MusicBox-Width:250px;
+    
+    --MusicBox-Title-Padding:15px;
+    --MusicBox-Title-Background:#222;
+    --MusicBox-Title-Size:12px;
+    --MusicBox-Title-Color:#fff;
+    --MusicBox-Title-Corner-Roundness:0px;
+    
+    --MusicBox-Main-Background:#fff;
+    --MusicBox-Main-Padding:14px;
+    --MusicBox-Side-Borders:#fff;
+    
+    --Album-Art-Size:32px;
+    --Album-Art-Corner-Roundness:3px;
+    --Album-Art-Gap:10px;
+    
+    --Song-Name-Size:9px;
+    --Song-Name-Color:#999;
+    
+    --Artist-Name-Size:10px;
+    --Artist-Name-Color:#444;
+    
+    --Music-Buttons-Size:11px;
+    --Music-Buttons-Color:#c6c3c8;
+    
+    --Track-Spacing:9px;
+    
+    --Autoplay-First-Song:no;
+    --Autoplay-Next-Song:yes;
+    --Loop-Playlist-Infinitely:yes;
+    
+    
+}
+
+[musicbox-title]{
+    font-family:'poppins', sans-serif;
+    font-weight:700;
+    letter-spacing:1px;
+    background-color:#fabc8c;
+}
+[artist-name],[song-name]{
+    font-family: 'roboto';
+    color: #aaa;
+    text-transform: lowercase;
+}
+[song-name]{
+    font-family: "roboto", sans-serif;
+    font-size: 7.5px;
+    font-weight: 800;
+    text-shadow: 0px 0px 2px #fff;
+    letter-spacing: 1.5px;
+    color: #d2dbe7;
+    text-transform: uppercase;
+    font-style: italic;
+    background:#fff;
+}
+</style>
+
+<div glenplayer03>
+    <div musicbox-title>music box</div>
+    
+    <!----- SONG #1 ----->
+    <img album-art src="https://cdn.discordapp.com/attachments/992769242627854456/1125970189322829844/71-zq8zIhUL.png">
+    
+    <div song-name>piensa en mi</div>
+    <div artist-name>natalia lafourcade</div>
+    
+    <audio src="https://cdn.discordapp.com/attachments/992769242627854456/1125973197146296371/Piensa_en_Mi.mp3" volume="70%>"></audio>
+    
+    
+    <!----- SONG #2 ----->
+    <img album-art src="https://media.discordapp.net/attachments/992769242627854456/1125976497174360124/20230704_222828.jpg">
+    
+    <div song-name>clueless</div>
+    <div artist-name>the marias</div>
+    
+    <audio src="https://cdn.discordapp.com/attachments/992769242627854456/1125976259474772068/Clueless.mp3" volume="70%"></audio>
+    
+    
+    <!----- SONG #3 ----->
+    <img album-art src="https://cdn.discordapp.com/attachments/992769242627854456/1125975063166980136/20230704_222247.jpg">
+    
+    <div song-name>雨のメッセージ</div>
+    <div artist-name>lamp</div>
+    
+    <audio src="https://cdn.discordapp.com/attachments/992769242627854456/1125974453877219409/f9e309a25de866e8.mp3" volume="70%"></audio>
+    
+    
+    <!----- SONG #4 ----->
+    <img album-art src="https://cdn.discordapp.com/attachments/992769242627854456/1125970189322829844/71-zq8zIhUL.png">
+    
+    <div song-name>La Fugitiva</div>
+    <div artist-name>Natalia Lafourcade</div>
+    
+    <audio src="https://cdn.discordapp.com/attachments/992769242627854456/1125973308081455154/Natalia_Lafourcade_-_La_Fugitiva_Ft_Kevin_Johansen.mp3" volume="70%"></audio>
+    
+    
+    <!----- SONG #5 ----->
+    <img album-art src="https://media.discordapp.net/attachments/992769242627854456/1125976497174360124/20230704_222828.jpg">
+    
+    <div song-name>cariño</div>
+    <div artist-name>the marias</div>
+    
+    <audio src="https://cdn.discordapp.com/attachments/992769242627854456/1125977545897164860/Carino.mp3" volume="70%"></audio>
+    
+</div><!--end music player // do not delete this line-->
+    
+</div>
+</body>
+</html>
+
